@@ -5,8 +5,8 @@ import streamlit as st
 
 df = pd.read_csv('./daata.csv')
 
-fac = df.Faculty.drop_duplicates()
-typ = df.Type.drop_duplicates()
+fac = sorted(df.Faculty.drop_duplicates())
+typ = sorted(df.Type.drop_duplicates())
 
 df1 = df.groupby('Type', as_index = 0)['Faculty'].count()
 fig1 = px.bar(df1, y = 'Faculty', x='Type')
