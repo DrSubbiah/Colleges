@@ -3,7 +3,7 @@ import numpy as np
 import plotly.express as px
 import streamlit as st
 
-df = pd.read_csv('D:\Varun\Data\daata.csv')
+df = pd.read_csv('./daata.csv')
 
 fac = df.Faculty.drop_duplicates()
 typ = df.Type.drop_duplicates()
