@@ -3,7 +3,7 @@ import numpy as np
 import plotly.express as px
 import streamlit as st
 
-df = pd.read_csv('./daata.csv')
+df = pd.read_csv('./daata_districtcorrected.csv')
 
 fac = sorted(df.Faculty.drop_duplicates())
 typ = sorted(df.Type.drop_duplicates())
